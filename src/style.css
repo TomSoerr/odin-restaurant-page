@@ -1,3 +1,91 @@
-.heading {
-  color: blueviolet;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+:root {
+  font-family: 'Roboto', sans-serif;
+  --light-brown: #fefae0;
+  --light-green: #e9f5db;
+  --text-color: #001a23;
 }
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #e9f5db;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 10vw 1fr 1fr 10vw;
+  color: var(--text-color);
+}
+
+#header {
+  position: fixed;
+  height: 6vh;
+  width: 100%;
+  display: grid;
+  gap: 2rem;
+  padding: 0 2rem;
+  grid-column: span 4;
+  grid-template-columns: 1fr auto auto;
+  align-items: center;
+  background-color: var(--light-green);
+}
+
+#header img {
+  height: 4vh;
+}
+
+#header .tab {
+  cursor: pointer;
+}
+
+.page {
+  display: contents;
+}
+
+.page #welcome {
+  grid-column:span 4;
+  position: relative;
+  height: 94vh;
+  width: 100vw;
+  overflow: hidden;
+  background-image: url('./img/home-1.jpg');
+  background-size: cover;
+  margin-top: 6vh;
+}
+
+.page #welcome-text-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 60%;
+  color: var(--light-brown);
+  background-color: #aeb7a3c7;
+  padding: 1rem 10vw 1rem 1rem;
+  border-top-left-radius: 2rem;
+  border-bottom-left-radius: 2rem;
+}
+
+.page #welcome-text-wrapper #welcome-text {
+  font-size: 1.8rem;
+  text-shadow: 2px 2px 0px var(--text-color);
+  margin: 0;
+  white-space: pre-line;
+}
+.page #welcome-text-wrapper #welcome-text span {
+  color: var(--light-green);
+  text-shadow: 3px 3px var(--text-color), 6px 6px var(--light-brown);
+  font-size: 4.5rem;
+  font-weight: 700;
+}
+
+.page #description {
+  
+}
+
+
