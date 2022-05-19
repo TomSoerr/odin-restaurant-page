@@ -1,5 +1,5 @@
 # My “Restaurant Page” Project
-![preview gif](./media/prev.gif)) 
+![preview gif](./media/prev.gif)
 
 ## Description
 In this project from “The Odin Project” I create a single page restaurant page. <br>
