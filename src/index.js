@@ -6,8 +6,46 @@ import contact from './contact.js';
 
 class restaurantPage {
   #content = document.querySelector('#content');
+  #homeContent;
+  #menuContent;
+  #contactContent;
 
   constructor() {
+    const menuTab = () => {
+      const menuTab = this.#createTab('Menu');
+      menuTab.addEventListener('click', () => {
+        this.#menuPage();
+      });
+      return menuTab;
+    }
+    const contactTab = () => {
+      const contactTab = this.#createTab('Contact');
+      contactTab.addEventListener('click', () => {
+        this.#contactPage();
+      });
+      return contactTab;
+    }
+    const homeTab = () => {
+      const homeTab = this.#createTab('Home');
+      homeTab.addEventListener('click', () => {
+        this.#homePage();
+      });
+      return homeTab;
+    };
+
+    this.#homeContent = [
+      header([menuTab(), contactTab()]),
+      home(),
+    ];
+    this.#menuContent = [
+      header([homeTab(), contactTab()]),
+      menu(),
+    ];
+    this.#contactContent = [
+      header([homeTab(), menuTab()]),
+      contact(),
+    ];
+
     this.#homePage();
   }
 
@@ -18,52 +56,31 @@ class restaurantPage {
     return tab;
   }
 
+  #delete() {
+    while (this.#content.firstChild) {
+      this.#content.firstChild.remove();
+    }
+  }
+
   #homePage() {
-    const menuTab = this.#createTab('Menu');
-    menuTab.addEventListener('click', () => {
-      this.#menuPage();
+    this.#delete();
+    this.#homeContent.forEach(item => {
+      this.#content.appendChild(item);
     });
-    const contactTab = this.#createTab('Contact');
-    contactTab.addEventListener('click', () => {
-      this.#contactPage();
-    });
-    
-    this.#content.replaceChildren(
-      header([menuTab, contactTab]),
-      home(),
-    );
   }
 
   #menuPage() {
-    const homeTab = this.#createTab('Home');
-    homeTab.addEventListener('click', () => {
-      this.#homePage();
+    this.#delete();
+    this.#menuContent.forEach(item => {
+      this.#content.appendChild(item);
     });
-    const contactTab = this.#createTab('Contact');
-    contactTab.addEventListener('click', () => {
-      this.#contactPage();
-    });
-
-    this.#content.replaceChildren(
-      header([homeTab, contactTab]),
-      menu(),
-    );
   }
 
   #contactPage() {
-    const homeTab = this.#createTab('Home');
-    homeTab.addEventListener('click', () => {
-      this.#homePage();
+    this.#delete();
+    this.#contactContent.forEach(item => {
+      this.#content.appendChild(item);
     });
-    const menuTab = this.#createTab('Menu');
-    menuTab.addEventListener('click', () => {
-      this.#menuPage();
-    });
-
-    this.#content.replaceChildren(
-      header([homeTab, menuTab]),
-      contact(),
-    );
   }
 }
 
