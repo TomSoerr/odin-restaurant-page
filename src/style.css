@@ -24,9 +24,11 @@ body {
   color: var(--text-color);
 }
 
+/* HEADER */
+
 #header {
   position: fixed;
-  height: 6vh;
+  min-height: 6vh;
   width: 100%;
   display: grid;
   gap: 2rem;
@@ -35,6 +37,9 @@ body {
   grid-template-columns: 1fr auto auto;
   align-items: center;
   background-color: var(--light-green);
+  z-index: 1;
+  /* border-bottom: thin solid #b5c99a; */
+  box-shadow: 0px -1px 10px #606c38;
 }
 
 #header img {
@@ -45,6 +50,8 @@ body {
   cursor: pointer;
 }
 
+/* HOME PAGE */
+
 .page {
   display: contents;
 }
@@ -52,10 +59,11 @@ body {
 .page #welcome {
   grid-column:span 4;
   position: relative;
-  height: 94vh;
+  min-height: 94vh;
   width: 100vw;
   overflow: hidden;
   background-image: url('./img/home-1.jpg');
+  background-position: center;
   background-size: cover;
   margin-top: 6vh;
 }
@@ -63,7 +71,8 @@ body {
 .page #welcome-text-wrapper {
   position: absolute;
   top: 30%;
-  left: 60%;
+  right: 0;
+  width: 40rem;
   color: var(--light-brown);
   background-color: #aeb7a3c7;
   padding: 1rem 10vw 1rem 1rem;
@@ -85,7 +94,173 @@ body {
 }
 
 .page #description {
-  
+  grid-column: 2 / span 2;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+  padding: 2rem 0;
 }
 
+.page #description h2 {
+  font-size: 4.5rem;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  margin: 0 0 2rem 0;
+  line-height: normal;
+}
+
+.page #gallery {
+  min-height: 94vh;
+  grid-column: span 4;
+  display: grid;
+  background-color: var(--light-brown);
+  gap: 0.5rem;
+  grid-template: 
+    "three two two" 4fr
+    "three four five" 5fr /
+    1fr 1fr 1fr;
+}
+
+.page #gallery #home-2 {
+  grid-area: two;
+  background-image: url('./img/home-2.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-3 {
+  grid-area: three;
+  background-image: url('./img/home-3.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-4 {
+  grid-area: four;
+  background-image: url('./img/home-4.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #gallery #home-5 {
+  grid-area: five;
+  background-image: url('./img/home-5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
+.page #faq {
+  display: grid;
+  grid-column: 2 / span 2;
+  padding: 2rem 2rem;
+  gap: 2rem 10vw;
+  min-height: 88vh;
+  grid-template-columns: 1fr 1fr;
+  align-content: start;
+}
+
+.page #faq h3 {
+  margin-top: 0;
+}
+
+.page #faq #faq-header {
+  grid-column: span 2;
+  text-align: center;
+  font-size: 4.5rem;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  margin: 0;
+}
+
+.page #faq p {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #footer {
+  grid-column: span 4;
+  height: 6vh;
+  width: 100%;
+  background-color: var(--light-brown);
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  grid-auto-flow: column;
+  box-shadow: 0px 1px 10px #c9ae8f;
+}
+
+.page #footer a {
+  color: var(--text-color);
+}
+
+/* MENU PAGE */
+
+.page #menu-1-text p,
+.page #menu-2-text p,
+.page #menu-3-text p {
+  letter-spacing: 0.05rem;
+  line-height: 1.9rem;
+  white-space: pre-line;
+}
+
+.page #menu-1-text h2,
+.page #menu-2-text h2,
+.page #menu-3-text h2 {
+  font-size: 3.5rem;
+  margin-top: 0;
+  color: #606c38;
+  text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
+  text-align: center;
+}
+
+.page #menu-1 {
+  grid-column: 1 / 3;
+  margin-top: 6vh;
+  background-image: url('./img/food-1.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+}
+
+.page #menu-1-text {
+  grid-column: 3;
+  margin-top: 6vh;
+  padding: 2rem 0rem 2rem 1rem;
+}
+
+.page #menu-2-text {
+  grid-column: 2;
+  padding: 2rem 1rem 2rem 0rem;
+}
+
+.page #menu-2 {
+  grid-column: 3 / 5;
+  min-height: 60vh;
+  background-image: url('./img/food-2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page #menu-3 {
+  grid-column: 1 / 3;
+  min-height: 60vh;
+  background-image: url('./img/food-3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.page #menu-3-text {
+  grid-column: 3;
+  padding: 2rem 0rem 2rem 1rem;
+}
+
+/* CONTACT PAGE */
 

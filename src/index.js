@@ -1,6 +1,8 @@
 import './style.css';
 import header from './header.js';
 import home from './home.js';
+import menu from './menu.js';
+import contact from './contact.js';
 
 class restaurantPage {
   #content = document.querySelector('#content');
@@ -17,7 +19,6 @@ class restaurantPage {
   }
 
   #homePage() {
-    // be aware of this in the EventListener function
     const menuTab = this.#createTab('Menu');
     menuTab.addEventListener('click', () => {
       this.#menuPage();
@@ -34,11 +35,35 @@ class restaurantPage {
   }
 
   #menuPage() {
-    console.log('menuPage');
+    const homeTab = this.#createTab('Home');
+    homeTab.addEventListener('click', () => {
+      this.#homePage();
+    });
+    const contactTab = this.#createTab('Contact');
+    contactTab.addEventListener('click', () => {
+      this.#contactPage();
+    });
+
+    this.#content.replaceChildren(
+      header([homeTab, contactTab]),
+      menu(),
+    );
   }
 
   #contactPage() {
-    console.log('contactPage');
+    const homeTab = this.#createTab('Home');
+    homeTab.addEventListener('click', () => {
+      this.#homePage();
+    });
+    const menuTab = this.#createTab('Menu');
+    menuTab.addEventListener('click', () => {
+      this.#menuPage();
+    });
+
+    this.#content.replaceChildren(
+      header([homeTab, menuTab]),
+      contact(),
+    );
   }
 }
 
