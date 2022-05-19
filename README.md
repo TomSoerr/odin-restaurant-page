@@ -1,21 +1,25 @@
-# My “...” Project
-![preview gif](./media/prev.gif) 
+# My “Restaurant Page” Project
+![preview gif](./media/prev.gif)) 
 
 ## Description
-In this project from “The Odin Project” I create a ... <br>
-This project has:
+In this project from “The Odin Project” I create a single page restaurant page. <br>
+This project has three different pages: 
 
-- ...
-- ...
+- Home page,
+- Menu page,
+- Contact page.
 
-...
+This project is build with JavaScript modules and Webpack.
 
 ## Links
-- [Live Preview]()
-- Link to the [Assignment]()
+- [Live Preview](https://tomsoerr.github.io/odin-restaurant-page/)
+- Link to the [Assignment](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
 - See my next [Project]()
 
 ## Notes
+The example text's are AI generated and from:
+- [DeepAI](https://deepai.org/machine-learning-model/text-generator)
+
 Check out the Artist I used the photos from:
 - Home:
   - <a href="https://unsplash.com/@shawnanggg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">shawnanggg</a> on <a href="https://unsplash.com/s/photos/restaurant?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
