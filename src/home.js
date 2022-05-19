@@ -73,7 +73,7 @@ function home() {
   const footer = create('div');
   footer.id = 'footer';
   const footerText = create('p');
-  footerText.textContent = '© 2020 The Vegan Chef';
+  footerText.textContent = '© 2022 The Vegan Chef';
   const githubText = create('p');
   const githubLink = create('a');
   githubLink.href = 'https://github.com/TomSoerr/odin-restaurant-page';

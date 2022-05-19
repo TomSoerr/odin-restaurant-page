@@ -180,7 +180,8 @@ body {
   margin: 0;
 }
 
-.page #faq p {
+.page #faq p,
+.page #faq h3 {
   letter-spacing: 0.05rem;
   line-height: 1.5rem;
 }
@@ -207,7 +208,7 @@ body {
 .page #menu-2-text p,
 .page #menu-3-text p {
   letter-spacing: 0.05rem;
-  line-height: 1.9rem;
+  line-height: 1.5rem;
   white-space: pre-line;
 }
 
@@ -216,6 +217,7 @@ body {
 .page #menu-3-text h2 {
   font-size: 3.5rem;
   margin-top: 0;
+  margin-bottom: 1rem;
   color: #606c38;
   text-shadow: 3px 3px var(--text-color), 6px 6px #dda15e;
   text-align: center;
@@ -234,11 +236,13 @@ body {
   grid-column: 3;
   margin-top: 6vh;
   padding: 2rem 0rem 2rem 1rem;
+  align-self: center;
 }
 
 .page #menu-2-text {
   grid-column: 2;
   padding: 2rem 1rem 2rem 0rem;
+  align-self: center;
 }
 
 .page #menu-2 {
@@ -260,10 +264,26 @@ body {
 .page #menu-3-text {
   grid-column: 3;
   padding: 2rem 0rem 2rem 1rem;
+  align-self: center;
 }
 
 /* CONTACT PAGE */
 
+.page #person-one p,
+.page #person-two p {
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #person-one h2,
+.page #person-two h2 {
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: #606c38;
+  text-shadow: 2px 2px var(--text-color), 4px 4px #dda15e;
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 .page #person-one {
   grid-column: 2;
@@ -277,6 +297,7 @@ body {
   background-position: center;
   width: 35vw;
   height: 45vw;
+  margin-bottom: 2rem;
 }
 
 .page #person-two {
@@ -291,4 +312,31 @@ body {
   background-position: center;
   width: 35vw;
   height: 45vw;
+  margin-bottom: 2rem;
 }
+
+.page #map {
+  grid-column: 2;
+  padding: 2rem 5vw 2rem 0rem;
+  height: 45vw;
+}
+
+.page #map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.page #address {
+  grid-column: 3;
+  padding: 2rem 0rem 2rem 5vw;
+  letter-spacing: 0.05rem;
+  line-height: 1.5rem;
+}
+
+.page #address h3:first-of-type {
+  margin-top: 0;
+}
+
