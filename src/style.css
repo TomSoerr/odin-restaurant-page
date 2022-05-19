@@ -264,3 +264,31 @@ body {
 
 /* CONTACT PAGE */
 
+
+.page #person-one {
+  grid-column: 2;
+  margin-top: 6vh;
+  padding: 2rem 5vw 2rem 0rem;
+}
+
+.page #person-one .person-img {
+  background-image: url('./img/contact-1.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 35vw;
+  height: 45vw;
+}
+
+.page #person-two {
+  grid-column: 3;
+  margin-top: 6vh;
+  padding: 2rem 0 2rem 5vw;
+}
+
+.page #person-two .person-img {
+  background-image: url('./img/contact-2.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 35vw;
+  height: 45vw;
+}
