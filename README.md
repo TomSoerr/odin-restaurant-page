@@ -14,7 +14,7 @@ This project is build with JavaScript modules and Webpack.
 ## Links
 - [Live Preview](https://tomsoerr.github.io/odin-restaurant-page/)
 - Link to the [Assignment](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
-- See my next [Project]()
+- See my next [Project](https://github.com/TomSoerr/odin-todo-list)
 
 ## Notes
 The example text's are AI generated and from:
