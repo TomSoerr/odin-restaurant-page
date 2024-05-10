@@ -12,6 +12,8 @@ This project has three different pages:
 This project is build with JavaScript modules and Webpack.
 
 ## Links
+
+- [Imprint](https://tomsoerr.github.io/#/impressum)
 - [Live Preview](https://tomsoerr.github.io/odin-restaurant-page/)
 - Link to the [Assignment](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page)
 - See my next [Project](https://github.com/TomSoerr/odin-todo-list)
